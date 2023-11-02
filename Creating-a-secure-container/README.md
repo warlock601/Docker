@@ -16,6 +16,13 @@ we can check and list all the networks in our host using:
 Now Login into any other container on this host and then try to ping this new container, it won't be reachable.
 ```bash
   docker exec -it container_name /bin/bash
+  apt-get update
+  apt-get install iputils-ping                  //to install the ping utility
   ping ip-address
 ```
 
+![Screenshot 2023-11-02 090707](https://github.com/warlock601/Docker/assets/32487715/89c058c8-ca04-4121-91d7-ac07b2c5822b)
+<br />
+<br />
+When we are trying to ping a container within the defualt bridge network, it will look like this:
+![Screenshot 2023-11-02 091210](https://github.com/warlock601/Docker/assets/32487715/59d57c40-b36b-494c-89fd-dfebc80ae9ed)
